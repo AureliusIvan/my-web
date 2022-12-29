@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+
+/* porto */
+
+.portoimage:hover{
+ transition: 0.5s;
+}
+.portoimage:hover{
+  opacity: 0.5;
+}

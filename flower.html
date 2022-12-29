@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+    background: rgba(0 0 0 0);
+    position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    height: 200px;
+    width: 200px;
+    
+    animation: pinSpin 10s infinite linear;
+    transform: rotate(360deg);
+    transform-origin: 95px 95px;
+    
+    
+    transform: rotate(360deg) translateX(0px);
+    -webkit-animation: pinOrbit 10s linear infinite; 
+    -moz-animation: pinOrbit 10s linear infinite; 
+    -o-animation: pinOrbit 10s linear infinite; 
+    animation: pinOrbit 10s linear infinite; 
+  }
+  
+  #center-circle {
+    background: #f8e23c;
+    border-radius: 6px;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.5);
+    height: 10px;
+    margin: 90px 0 0 90px;
+    position: absolute;
+    width: 10px;
+    z-index: 9;
+  }
+
+  #circle-highlight {
+    background: #fff7b2;
+    border-radius: 1.5px;
+    box-shadow: 0 0 2px 1px rgba(240, 211, 0, 0.8);
+    height: 3px;
+    position: relative;
+      top: 2.5px;
+      left: 6px;
+    width: 3px;
+    z-index: 10;
+  }
+
+  #triangle-large-upper-left {
+    border-top: 65px solid transparent;
+    border-left: 65px solid #ff6b5b;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.4);
+    height: 0;
+    margin: 30px 0 0 30px;
+    position: absolute;
+    width: 0;
+    z-index: 2;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+    border-bottom-left-radius: 80%;
+    /* border: 1px solid black; */
+  }
+  /* #triangle-large-upper-left::after{
+    width: 100px;
+    height: 100px;
+    z-index: 4;
+    background-color: aqua;
+    position: absolute;
+  } */
+  
+   /* #triangle-small-upper-left {
+    border-top: 65px solid transparent;
+    border-right: 65px solid #ff8d8f;
+    height: 0;
+    margin: 30px 0 0 30px;
+    position: absolute;
+    width: 0;
+    z-index: 1;
+   } */
+   
+  #triangle-large-upper-right {
+    border-top: 65px solid #49d0cc;
+    border-right: 65px solid transparent;
+    box-shadow: -1px 0 2px -1px rgba(0, 0, 0, 0.4);
+    height: 0;
+    margin: 30px 0 0 95px;
+    position: absolute;
+    width: 0;
+    z-index: 2;
+    border-top-left-radius: 80%;
+    border-top-right-radius: 80%;
+    border-bottom-right-radius: 80%;
+  }
+  
+  /* #triangle-small-upper-right {
+    border-bottom: 65px solid #4bf2e1;
+    border-right: 65px solid transparent;
+    height: 0;
+    margin: 30px 0 0 95px;
+    position: absolute;
+    width: 0;
+    z-index: 1;
+  } */
+  
+  #triangle-large-lower-left {
+    border-bottom: 65px solid #ebff3b;
+    border-left: 65px solid transparent;
+    box-shadow: 1px 0 2px -1px rgba(0, 0, 0, 0.4);
+    height: 0;
+    margin: 95px 0 0 30px;
+    position: absolute;
+    width: 0;
+    z-index: 2;
+    border-top-left-radius: 80%;
+    /* border-top-right-radius: 80%; */
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+  }
+  
+  /* #triangle-small-lower-left {
+    border-top: 65px solid #ffed5f;
+    border-left: 65px solid transparent;
+    box-shadow: 2px 0 2px -1px rgba(0, 0, 0, 0.4);
+    height: 0;
+    margin: 95px 0 0 30px;
+    position: absolute;
+    width: 0;
+    z-index: 1;
+  } */
+  
+  /* #triangle-small-lower-right {
+    border-bottom: 65px solid transparent;
+    border-left: 65px solid #a3ff8e;
+    box-shadow: 0 -1px 2px -1px rgba(0, 0, 0, 0.4);
+    height: 0;
+    margin: 95px 0 0 95px;
+    position: absolute;
+    width: 0;
+    z-index: 1;
+  } */
+  
+  #triangle-large-lower-right {
+    border-bottom: 65px solid transparent;
+    border-right: 65px solid #63d96c;
+    height: 0;
+    margin: 95px 0 0 95px;
+    position: absolute;
+    width: 0;
+    z-index: 2;
+    /* border-top-left-radius: 80%; */
+    border-top-right-radius: 80%;
+    border-bottom-left-radius: 80%;
+    border-bottom-right-radius: 80%;
+  }
+  
+  @-webkit-keyframes pinOrbit {
+      from { -webkit-transform: rotate(0deg) translateX(0px); }
+      to   { -webkit-transform: rotate(360deg) translateX(0px); }
+  }
+  
+  @-moz-keyframes pinOrbit {
+      from { -webkit-transform: rotate(0deg) translateX(0px); }
+      to   { -webkit-transform: rotate(360deg) translateX(0px); }
+  }
+  
+  @-o-keyframes pinOrbit {
+      from { -webkit-transform: rotate(0deg) translateX(0px); }
+      to   { -webkit-transform: rotate(360deg) translateX(0px); }
+  }
+  
+  @keyframes pinOrbit {
+      from { -webkit-transform: rotate(0deg) translateX(0px); }
+      to   { -webkit-transform: rotate(360deg) translateX(0px); }
+  }
+  
+  
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="center-circle">
+          <div id="circle-highlight"></div>  
+        </div>
+        <div id="triangle-large-upper-left"></div>
+        <div id="triangle-small-upper-left"></div>
+        <div id="triangle-large-upper-right"></div>
+        <div id="triangle-small-upper-right"></div>
+        <div id="triangle-large-lower-left"></div>
+        <div id="triangle-small-lower-left"></div>
+        <div id="triangle-large-lower-right"></div>
+        <div id="triangle-small-lower-right"></div>
+      </div>
+  
+</body>
+</html>
