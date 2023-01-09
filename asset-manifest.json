@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/my-web/static/css/main.5af2a566.css",
+    "main.js": "/my-web/static/js/main.daba49e1.js",
+    "static/js/787.e3835ec5.chunk.js": "/my-web/static/js/787.e3835ec5.chunk.js",
+    "static/media/FinalPTI.png": "/my-web/static/media/FinalPTI.49e07ed01418721d3478.png",
+    "static/media/profile.jpg": "/my-web/static/media/profile.38483dc72907d42c2b18.jpg",
+    "static/media/ghostrun.png": "/my-web/static/media/ghostrun.56825a20534c4716b0b9.png",
+    "static/media/logo.svg": "/my-web/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/instagram.svg": "/my-web/static/media/instagram.e5adfa9ef0e2dd7ec2673eb17a078939.svg",
+    "index.html": "/my-web/index.html",
+    "main.5af2a566.css.map": "/my-web/static/css/main.5af2a566.css.map",
+    "main.daba49e1.js.map": "/my-web/static/js/main.daba49e1.js.map",
+    "787.e3835ec5.chunk.js.map": "/my-web/static/js/787.e3835ec5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5af2a566.css",
+    "static/js/main.daba49e1.js"
+  ]
+}
