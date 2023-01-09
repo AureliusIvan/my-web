@@ -12,9 +12,7 @@ function Contact() {
                 gap={4}
                 padding='10px'
                 textAlign={'center'}
-                // border="10px solid white"
                 borderBottom={'2px solid rgba(255, 255, 255, 0.4)'}
-                // boxShadow='0 10px 10px rgba(255, 255, 255, 0.7)'
                 margin={'10px'}
             >
                 <GridItem>

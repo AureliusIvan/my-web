@@ -14,7 +14,6 @@ import { useEffect } from "react";
 import { motion, useTransform } from "framer-motion";
 import { useMouse } from 'react-use';
 import { Desc } from './desc';
-
 // pages
 import About from './about';
 import Portofolio from './porto';
@@ -43,14 +42,13 @@ function Home() {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
   // 
 
+  
 
 
 
   function eyeball() {
     'use strict';
     var eye = document.querySelectorAll(".eye");
-    // var pupil = document.querySelectorAll(".eye",":after");
-    // var pupil = window.getComputedStyle(eye,':after')
     eye.forEach(function (eye) {
       let x = (eye.getBoundingClientRect().left) + (eye.clientWidth / 2)
       let y = (eye.getBoundingClientRect().top) + (eye.clientHeight / 2);
@@ -118,7 +116,7 @@ function Home() {
 
   //  
   return (
-    <div id="home" style={{ backgroundColor: "black" }} width="100%">
+    <Box  id="home" style={{ backgroundColor: "black" }} width="100%" zIndex={1}>
       <br />
       <Box padding={"10px"} id='eyeball' ref={ref}>
         <div class="eyes">
@@ -132,35 +130,34 @@ function Home() {
           alignItems={"center"}
           className="glow letter Montserrat"
           fontSize={50}
-          // border='2px solid white'
-          // fontStyle="italic"
+
         >
           IVAN
         </Flex>
         <br />
       </Center>
-      <Contact/>
+      <Contact />
       {/* <Desc/> */}
       <Flex justifyContent='center' alignContent={'center'} id="menu">
-        <Button onClick={()=>SetMenu(1)} marginInline='10px' width="100px" height={['100px']} fontSize={menu === 1? [10] : [20]} bg={menu === 1? 'white' : 'black'} color={menu === 1? 'black' : 'white'} className="menulist Montserrat" fontWeight={'bold'} transition='0.5' >ABOUT</Button>
-        <Button onClick={()=>SetMenu(2)} marginInline='10px' width="100px" height={['100px']} fontSize={menu === 2? [10] : [20]} bg={menu === 2? 'white' : 'black'} color={menu === 2? 'black' : 'white'} className="menulist Montserrat" fontWeight={'bold'} >PORTOFOLIO</Button>
+        <Button onClick={() => SetMenu(1)} marginInline='10px' width="100px" height={['100px']} fontSize={menu === 1 ? [10] : [20]} bg={menu === 1 ? 'white' : 'black'} color={menu === 1 ? 'black' : 'white'} className="menulist Montserrat" fontWeight={'bold'} transition='0.5' >ABOUT</Button>
+        <Button onClick={() => SetMenu(2)} marginInline='10px' width="100px" height={['100px']} fontSize={menu === 2 ? [10] : [20]} bg={menu === 2 ? 'white' : 'black'} color={menu === 2 ? 'black' : 'white'} className="menulist Montserrat" fontWeight={'bold'} >PORTOFOLIO</Button>
         {/* <Button onClick={()=>SetMenu(3)} marginInline='10px' width="100px" height={['100px']} fontSize={[20]} bg="black" color="white" className="menulist" >CONTACT</Button> */}
 
       </Flex>
       <Box id='MenuOutput'>
-        {(()=>{
-        switch (menu) {
-          case 0:
-            return <About/>;
-          case 1:
-            return <About/>;
-          case 2:
-            return <Portofolio/>;
-          case 3:
-            return <Contact/>;
-          default:
-            break;
-        }
+        {(() => {
+          switch (menu) {
+            case 0:
+              return <About />;
+            case 1:
+              return <About />;
+            case 2:
+              return <Portofolio />;
+            case 3:
+              return <Contact />;
+            default:
+              break;
+          }
         })()}
 
       </Box>
@@ -176,7 +173,7 @@ function Home() {
       <div id="footer">
         {/* <p>© Aurelius Ivan Wijaya 2022</p> */}
       </div>
-    </div>
+    </Box>
   );
 }
 
